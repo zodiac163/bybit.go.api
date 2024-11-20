@@ -129,7 +129,7 @@ func (c *Client) parseRequest(r *request, opts ...RequestOption) (err error) {
 		header = r.header.Clone()
 	}
 	header.Set("User-Agent", fmt.Sprintf("%s/%s", Name, Version))
-	header.Set("referer", "Trade-mate")
+	header.Set("referer", "api.Trade-mate")
 
 	if r.secType == secTypeSigned {
 		timeStamp := GetCurrentTime()
